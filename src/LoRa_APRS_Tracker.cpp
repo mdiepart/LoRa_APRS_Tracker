@@ -361,7 +361,7 @@ void load_config() {
   ConfigurationManagement confmg("/tracker.json");
   Config = confmg.readConfiguration();
   BeaconMan.loadConfig(Config.beacons);
-  if (BeaconMan.getCurrentBeaconConfig()->callsign == "NOCALL-10") {
+  if (BeaconMan.getCurrentBeaconConfig()->callsign == "NOCALL-7") {
     logPrintlnE("You have to change your settings in 'data/tracker.json' and "
                 "upload it via \"Upload File System image\"!");
     show_display("ERROR", "You have to change your settings in 'data/tracker.json' and "
