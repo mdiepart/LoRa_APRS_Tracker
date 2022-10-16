@@ -19,6 +19,7 @@
 				"min_bcn": 5
 			},
 			"enhance_precision": true
+			"send_altitude": false
 		}
 	],
 	"button": {

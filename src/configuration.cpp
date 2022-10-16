@@ -62,6 +62,7 @@ Configuration ConfigurationManagement::readConfiguration() {
     beacon.smart_beacon.min_bcn     = v["smart_beacon"]["min_bcn"] | 5;
 
     beacon.enhance_precision = v["enhance_precision"] | false;
+    beacon.send_altitude            = v["send_altitude"] | false;
 
     conf.beacons.push_back(beacon);
   }

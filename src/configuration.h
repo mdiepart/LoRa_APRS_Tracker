@@ -36,6 +36,7 @@ public:
     String       overlay;
     Smart_Beacon smart_beacon;
     bool         enhance_precision;
+    bool         send_altitude;
   };
 
   class LoRa {

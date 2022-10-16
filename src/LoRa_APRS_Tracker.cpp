@@ -240,12 +240,15 @@ void loop() {
     }
 
     String alt     = "";
-    int    alt_int = max(-99999, min(999999, (int)gps.altitude.feet()));
-    if (alt_int < 0) {
-      alt = "/A=-" + padding(alt_int * -1, 5);
-    } else {
-      alt = "/A=" + padding(alt_int, 6);
+    if(BeaconMan.getCurrentBeaconConfig()->send_altitude){
+      int    alt_int = max(-99999, min(999999, (int)gps.altitude.feet()));
+      if (alt_int < 0) {
+        alt = "/A=-" + padding(alt_int * -1, 5);
+      } else {
+        alt = "/A=" + padding(alt_int, 6);
+      }
     }
+
 
     String course_and_speed = "";
     int    speed_int        = max(0, min(999, (int)gps.speed.knots()));
